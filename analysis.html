@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analysis &amp; Simulation | Joshua Dalal</title>
+<meta name="description" content="CFD, numerical methods, and mechatronics work: combustion simulation, vortex shedding, reaction-diffusion solvers, and a maglev train, with full reports and slides.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap nav-in">
+  <a class="brand" href="index.html">Joshua<span>&nbsp;Dalal</span></a>
+  <div class="nav-links">
+    <a href="index.html#propulsion" >Work</a>
+    <a href="analysis.html" aria-current="page">Analysis</a>
+    <a href="about.html" >About</a>
+    <a href="contact.html" >Contact</a>
+  </div>
+</div></nav>
+
+<main class="wrap">
+  <header class="proj-head">
+    <p class="mono eyebrow">Analysis &amp; Simulation</p>
+    <h1 class="display">CFD, Numerics &amp; Mechatronics</h1>
+    <p class="lede">Simulation and numerical-methods work from graduate coursework and team research: combustion CFD, bluff-body aerodynamics, a hand-derived PDE solver, and a working maglev train. Full reports and presentation slides are linked for each project.</p>
+  </header>
+
+  <section class="section" style="padding-top:34px">
+
+<article class="doc-row">
+  <div class="doc-img"><img src="assets/analysis-6900-mr.png" alt="Temperature contours across mixture-ratio sweep in a rocket combustion chamber" loading="lazy"></div>
+  <div>
+    <p class="mono eyebrow">MEAM 6900 &middot; Spring 2026</p>
+    <h3>Rocket Combustion Chamber CFD</h3>
+    <p>GOX/GCH&#8324; combustion and supersonic nozzle flow simulated in ANSYS Fluent with a species-transport combustion model. Independent parametric sweeps of back pressure, O/F mixture ratio, and injector swirl: rising back pressure suppressed nozzle choking and introduced normal shocks, while mixture-ratio sweeps from fuel-rich to ox-rich shifted flame temperature with peak values near MR &asymp; 4 and left the flow structure largely unchanged. With Oren Minsk and Eitan Seitchik.</p>
+    <div class="doc-links">
+      <a href="docs/meam6900-combustion-cfd-report.pdf" target="_blank" rel="noopener">Report (PDF) &rarr;</a>
+      <a href="docs/meam6900-combustion-cfd-slides.pdf" target="_blank" rel="noopener">Slides (PDF) &rarr;</a>
+    </div>
+  </div>
+</article>
+
+<article class="doc-row">
+  <div class="doc-img"><img src="assets/analysis-cylinder.png" alt="Kármán vortex street behind a circular cylinder at Re = 1000" loading="lazy"></div>
+  <div>
+    <p class="mono eyebrow">MEAM 5360 &middot; Spring 2026</p>
+    <h3>Flow Past a Circular Cylinder</h3>
+    <p>2D incompressible flow past a confined cylinder at Re = 0.1&ndash;1000 in ANSYS Fluent. A mesh-independence study settled on an 11k-element hybrid mesh with boundary-layer inflation; drag coefficients were benchmarked against empirical correlations, and transient runs captured the transition from creeping flow to periodic K&aacute;rm&aacute;n vortex shedding at Re &ge; 100. With Jason de Gentile.</p>
+    <div class="doc-links">
+      <a href="docs/meam5360-cylinder-flow-report.pdf" target="_blank" rel="noopener">Report (PDF) &rarr;</a>
+    </div>
+  </div>
+</article>
+
+<article class="doc-row">
+  <div class="doc-img"><img src="assets/analysis-turing.png" alt="Turing pattern from the Schnakenberg reaction-diffusion system" loading="lazy"></div>
+  <div>
+    <p class="mono eyebrow">ENM 5220 &middot; Spring 2026</p>
+    <h3>ADI Solver for Turing Patterns</h3>
+    <p>A Peaceman&ndash;Rachford ADI solver for the Schnakenberg reaction-diffusion system on the unit square, written from scratch in MATLAB: hand-derived discretization, careful Neumann boundary treatment at each half-step, and Thomas-algorithm tridiagonal solves. Reproduces the diffusion-driven pattern formation results of Madzvamuse &amp; Maini (2007) at &gamma; = 114, 1000, and 5000, with a convergence study against a known diffusion solution.</p>
+    <div class="doc-links">
+      <a href="docs/enm5220-adi-reaction-diffusion-proposal.pdf" target="_blank" rel="noopener">Proposal (PDF) &rarr;</a>
+    </div>
+  </div>
+</article>
+
+<article class="doc-row">
+  <div class="doc-img"><img src="assets/analysis-bikes.png" alt="Velocity field around a recumbent cyclist with a curved windshield" loading="lazy"></div>
+  <div>
+    <p class="mono eyebrow">CFD Team Project &middot; Spring 2025</p>
+    <h3>Recumbent Bicycle Windshield</h3>
+    <p>CFD study of windshield geometries for a recumbent bicycle, targeting rider comfort rather than pure drag reduction. Velocity-field analysis around the rider at low and high speeds compared flat, interpolated, and curved shield profiles, focusing on flow conditions at the rider's head. With Annie Gao and Ari Weiner.</p>
+    <div class="doc-links">
+      <a href="docs/recumbent-windshield-cfd-slides.pdf" target="_blank" rel="noopener">Slides (PDF) &rarr;</a>
+    </div>
+  </div>
+</article>
+
+<article class="doc-row">
+  <div class="doc-img cover"><img src="assets/analysis-maglev.png" alt="Maglev train test track with electromagnet array and drive electronics" loading="lazy"></div>
+  <div>
+    <p class="mono eyebrow">Mechatronics &middot; 2025</p>
+    <h3>Maglev Train</h3>
+    <p>A magnetically levitated train with linear synchronous motor propulsion: N52 permanent-magnet levitation, air-core electromagnet coils driven by H-bridge controllers with Hall-effect commutation, and a two-part modular carriage with adjustable ballast to tune levitation height and lateral stability.</p>
+    <div class="doc-links">
+      <a href="docs/maglev-train-report.pdf" target="_blank" rel="noopener">Report (PDF) &rarr;</a>
+    </div>
+  </div>
+</article>
+
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <div class="foot-in">
+    <div>
+      <p class="mono eyebrow">Contact</p>
+      <p class="display" style="margin-top:14px">Get in touch.</p>
+    </div>
+    <div class="foot-links">
+      <a href="mailto:joshuakdalal@gmail.com">joshuakdalal@gmail.com</a>
+      <a href="https://www.linkedin.com/in/joshua-dalal-6b8a5519b" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://projectwavefront.org" target="_blank" rel="noopener">projectwavefront.org</a>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>Joshua Dalal &middot; Philadelphia, PA</span>
+    <span>Mechanical Engineering &amp; Applied Mechanics, UPenn</span>
+  </div>
+</div></footer>
+</body></html>
