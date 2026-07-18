@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" font-family="Inter, system-ui, sans-serif">
+  <rect width="640" height="480" fill="#FCFCFB"/>
+  <line x1="70" y1="240" x2="560" y2="240" stroke="#E7E4E0" stroke-width="1" stroke-dasharray="5 6"/>
+  <g fill="none" stroke="#3a4046" stroke-width="1.8" stroke-linejoin="round">
+    <rect x="150" y="205" width="270" height="70" rx="35"/>
+    <path d="M412 208 L470 227 L470 253 L412 272"/>
+    <circle cx="500" cy="240" r="22"/>
+    <path d="M372 205 L414 205 L395 179 Z"/>
+    <path d="M372 275 L414 275 L395 301 Z"/>
+    <path d="M196 275 h38 v12 h-38 Z"/>
+    <circle cx="215" cy="306" r="10"/>
+    <rect x="250" y="218" width="120" height="44" rx="6" stroke="#B5664B" stroke-dasharray="5 4"/>
+  </g>
+  <circle cx="166" cy="240" r="7" fill="#2b3236"/>
+  <circle cx="500" cy="240" r="5.5" fill="#B5664B"/>
+  <circle cx="215" cy="306" r="3" fill="#B5664B"/>
+  <g stroke="#3a4046" stroke-width="1.8"><line x1="285" y1="205" x2="285" y2="196"/><line x1="315" y1="205" x2="315" y2="196"/><line x1="345" y1="205" x2="345" y2="196"/></g>
+</svg>

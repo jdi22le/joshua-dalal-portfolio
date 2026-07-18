@@ -1,87 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 620" font-family="Inter, system-ui, sans-serif">
-  <defs>
-    <linearGradient id="hull2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#eef1f2"/>
-      <stop offset="0.5" stop-color="#dce1e4"/>
-      <stop offset="1" stop-color="#c6cdd1"/>
-    </linearGradient>
-    <linearGradient id="cap2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e6e9eb"/>
-      <stop offset="1" stop-color="#bfc6ca"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" font-family="Inter, system-ui, sans-serif">
+  <rect width="1200" height="540" fill="#FCFCFB"/>
 
-  <rect width="1240" height="620" fill="#FCFCFB"/>
-  <line x1="230" y1="320" x2="1010" y2="320" stroke="#E7E4E0" stroke-width="1" stroke-dasharray="6 7"/>
-
-  <path d="M726 278 L792 278 L776 242 L750 242 Z" fill="#c9cfd3" stroke="#a6adb2" stroke-width="1.4"/>
-  <path d="M726 362 L792 362 L776 398 L750 398 Z" fill="#c9cfd3" stroke="#a6adb2" stroke-width="1.4"/>
-
-  <path d="M360 278 q-72 4 -72 42 q0 38 72 42 Z" fill="url(#cap2)" stroke="#a6adb2" stroke-width="1.5"/>
-  <rect x="358" y="278" width="470" height="84" rx="12" fill="url(#hull2)" stroke="#a6adb2" stroke-width="1.5"/>
-  <path d="M828 278 q54 4 54 42 q0 38 -54 42 Z" fill="url(#cap2)" stroke="#a6adb2" stroke-width="1.5"/>
-  <line x1="492" y1="280" x2="492" y2="360" stroke="#b4bbc0" stroke-width="1"/>
-  <line x1="704" y1="280" x2="704" y2="360" stroke="#b4bbc0" stroke-width="1"/>
-
-  <circle cx="300" cy="320" r="11" fill="#2b3236" stroke="#14171A" stroke-width="2"/>
-  <circle cx="296" cy="316" r="3" fill="#7c848a"/>
-
-  <ellipse cx="902" cy="320" rx="11" ry="40" fill="none" stroke="#8a9297" stroke-width="4"/>
-  <g stroke="#a6adb2" stroke-width="2">
-    <line x1="902" y1="284" x2="902" y2="356"/>
-    <line x1="893" y1="298" x2="911" y2="342"/>
-    <line x1="911" y1="298" x2="893" y2="342"/>
+  <!-- ===== minimal line vehicle ===== -->
+  <g fill="none" stroke="#3a4046" stroke-width="1.7" stroke-linejoin="round">
+    <!-- body capsule -->
+    <rect x="300" y="172" width="452" height="78" rx="39"/>
+    <!-- tail cone -->
+    <path d="M742 176 L812 198 L812 224 L742 246"/>
+    <!-- ducted prop -->
+    <circle cx="846" cy="211" r="25"/>
+    <!-- top fin -->
+    <path d="M694 172 L742 172 L720 143 Z"/>
+    <!-- bottom fin -->
+    <path d="M694 250 L742 250 L720 279 Z"/>
+    <!-- belly pod + pivot thruster -->
+    <path d="M352 250 h44 v13 h-44 Z"/>
+    <circle cx="374" cy="284" r="11"/>
+    <!-- ballast (internal, dashed) -->
+    <rect x="432" y="186" width="150" height="50" rx="6" stroke="#B5664B" stroke-dasharray="5 4"/>
+    <line x1="446" y1="211" x2="568" y2="211" stroke="#8a9297"/>
+    <!-- compute (internal) -->
+    <rect x="642" y="190" width="28" height="42" rx="4"/>
   </g>
-  <circle cx="902" cy="320" r="8" fill="#B5664B"/>
-
-  <rect x="372" y="362" width="42" height="17" rx="4" fill="#c6cdd1" stroke="#a6adb2" stroke-width="1.4"/>
-  <ellipse cx="393" cy="392" rx="17" ry="7.5" fill="none" stroke="#8a9297" stroke-width="3.5"/>
-  <circle cx="393" cy="392" r="3.5" fill="#B5664B"/>
-
-  <g fill="#14171A"><circle cx="500" cy="276" r="5"/><circle cx="558" cy="276" r="5"/><circle cx="616" cy="276" r="5"/><circle cx="674" cy="276" r="5"/></g>
-
-  <rect x="506" y="292" width="188" height="56" rx="4" fill="none" stroke="#B5664B" stroke-width="1.4" stroke-dasharray="5 4"/>
-  <line x1="518" y1="320" x2="682" y2="320" stroke="#8a9297" stroke-width="3"/>
-  <g stroke="#8a9297" stroke-width="2">
-    <line x1="524" y1="314" x2="524" y2="326"/><line x1="536" y1="314" x2="536" y2="326"/>
-    <line x1="548" y1="314" x2="548" y2="326"/><line x1="560" y1="314" x2="560" y2="326"/>
+  <!-- ballast rod ticks -->
+  <g stroke="#8a9297" stroke-width="1.4">
+    <line x1="452" y1="206" x2="452" y2="216"/><line x1="462" y1="206" x2="462" y2="216"/>
+    <line x1="472" y1="206" x2="472" y2="216"/><line x1="482" y1="206" x2="482" y2="216"/>
   </g>
+  <!-- camera + hub + hydrophones -->
+  <circle cx="318" cy="211" r="8" fill="#2b3236"/>
+  <circle cx="846" cy="211" r="6" fill="#B5664B"/>
+  <circle cx="374" cy="284" r="3.5" fill="#B5664B"/>
+  <g stroke="#3a4046" stroke-width="1.7"><line x1="486" y1="172" x2="486" y2="163"/><line x1="524" y1="172" x2="524" y2="163"/><line x1="562" y1="172" x2="562" y2="163"/><line x1="600" y1="172" x2="600" y2="163"/></g>
 
-  <rect x="712" y="298" width="30" height="44" rx="3" fill="#2b3236" stroke="#14171A" stroke-width="1.4"/>
-  <rect x="717" y="304" width="20" height="13" rx="2" fill="#48525a"/>
-
-  <g stroke="#B5664B" stroke-width="1.2" fill="none">
-    <path d="M300 308 L300 200 L150 200"/>
-    <path d="M587 276 L587 158 L470 158"/>
-    <path d="M762 242 L762 168 L930 168"/>
-    <path d="M913 320 L1000 320"/>
-    <path d="M727 342 L727 452 L1000 452"/>
-    <path d="M600 348 L600 468 L470 468"/>
-    <path d="M393 399 L393 516 L150 516"/>
+  <!-- ===== number badges (on components, no leaders) ===== -->
+  <g font-size="12.5" font-weight="700" text-anchor="middle">
+    <g><circle cx="318" cy="140" r="11" fill="#B5664B"/><text x="318" y="144.5" fill="#fff">1</text></g>
+    <g><circle cx="543" cy="140" r="11" fill="#B5664B"/><text x="543" y="144.5" fill="#fff">2</text></g>
+    <g><circle cx="470" cy="211" r="11" fill="#B5664B"/><text x="470" y="215.5" fill="#fff">3</text></g>
+    <g><circle cx="656" cy="140" r="11" fill="#B5664B"/><text x="656" y="144.5" fill="#fff">4</text></g>
+    <g><circle cx="720" cy="118" r="11" fill="#B5664B"/><text x="720" y="122.5" fill="#fff">5</text></g>
+    <g><circle cx="846" cy="140" r="11" fill="#B5664B"/><text x="846" y="144.5" fill="#fff">6</text></g>
+    <g><circle cx="374" cy="316" r="11" fill="#B5664B"/><text x="374" y="320.5" fill="#fff">7</text></g>
   </g>
-  <g fill="#B5664B">
-    <circle cx="150" cy="200" r="3"/><circle cx="470" cy="158" r="3"/><circle cx="930" cy="168" r="3"/>
-    <circle cx="1000" cy="320" r="3"/><circle cx="1000" cy="452" r="3"/><circle cx="470" cy="468" r="3"/><circle cx="150" cy="516" r="3"/>
+  <!-- short ticks from badge toward its component -->
+  <g stroke="#B5664B" stroke-width="1.2">
+    <line x1="318" y1="151" x2="318" y2="201"/>
+    <line x1="543" y1="151" x2="543" y2="165"/>
+    <line x1="656" y1="151" x2="656" y2="190"/>
+    <line x1="720" y1="129" x2="720" y2="150"/>
+    <line x1="846" y1="151" x2="846" y2="188"/>
+    <line x1="374" y1="305" x2="374" y2="295"/>
   </g>
 
-  <g fill="#14171A" font-size="15.5" font-weight="600">
-    <text x="150" y="194">Front camera</text>
-    <text x="464" y="152" text-anchor="end">4&#215; hydrophone array</text>
-    <text x="942" y="164">Servo-actuated fins</text>
-    <text x="1012" y="316">T200 main thruster</text>
-    <text x="1012" y="448">Onboard compute (Jetson)</text>
-    <text x="464" y="462" text-anchor="end">Ballast tank</text>
-    <text x="150" y="510">Pivoting front thruster</text>
+  <!-- ===== legend ===== -->
+  <g>
+    <line x1="120" y1="372" x2="1080" y2="372" stroke="#E7E4E0" stroke-width="1"/>
+  </g>
+  <g font-size="14" font-weight="700" text-anchor="middle" fill="#fff">
+    <g><circle cx="130" cy="404" r="10" fill="#B5664B"/><text x="130" y="408.5">1</text></g>
+    <g><circle cx="130" cy="444" r="10" fill="#B5664B"/><text x="130" y="448.5">2</text></g>
+    <g><circle cx="130" cy="484" r="10" fill="#B5664B"/><text x="130" y="488.5">3</text></g>
+    <g><circle cx="640" cy="404" r="10" fill="#B5664B"/><text x="640" y="408.5">4</text></g>
+    <g><circle cx="640" cy="444" r="10" fill="#B5664B"/><text x="640" y="448.5">5</text></g>
+    <g><circle cx="640" cy="484" r="10" fill="#B5664B"/><text x="640" y="488.5">6</text></g>
+    <g><circle cx="640" cy="524" r="10" fill="#B5664B"/><text x="640" y="528.5">7</text></g>
+  </g>
+  <g fill="#14171A" font-size="15" font-weight="600">
+    <text x="152" y="400">Forward camera</text>
+    <text x="152" y="440">4&#215; hydrophone array</text>
+    <text x="152" y="480">Ballast tank</text>
+    <text x="662" y="400">Onboard compute</text>
+    <text x="662" y="440">Servo-actuated fins</text>
+    <text x="662" y="480">T200 main thruster</text>
+    <text x="662" y="520">Pivoting front thruster</text>
   </g>
   <g fill="#6E7680" font-size="12.5">
-    <text x="150" y="213">OpenCV vision tracking</text>
-    <text x="464" y="171" text-anchor="end">TDOA bearing &amp; range</text>
-    <text x="942" y="183">horizontal-plane steering</text>
-    <text x="1012" y="335">ducted, low-speed cruise</text>
-    <text x="1012" y="467">classification &amp; control</text>
-    <text x="464" y="481" text-anchor="end">threaded-rod depth control</text>
-    <text x="150" y="529">vectored low-speed control</text>
+    <text x="152" y="416">OpenCV vision tracking</text>
+    <text x="152" y="456">TDOA bearing &amp; range</text>
+    <text x="152" y="496">threaded-rod depth control</text>
+    <text x="662" y="416">Jetson Orin Nano + Teensy 4.1</text>
+    <text x="662" y="456">horizontal-plane steering</text>
+    <text x="662" y="496">ducted, low-speed cruise</text>
+    <text x="662" y="536">vectored low-speed control</text>
   </g>
-
-  <text x="150" y="585" fill="#6E7680" font-size="12.5">4&#8243; PVC hull &#183; 3D-printed endcaps &#183; near-neutral static trim</text>
 </svg>
