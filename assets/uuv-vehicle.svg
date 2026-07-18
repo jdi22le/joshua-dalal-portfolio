@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef1f2"/>
+      <stop offset="0.5" stop-color="#d7dcdf"/>
+      <stop offset="1" stop-color="#c2c9cd"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6e9eb"/>
+      <stop offset="1" stop-color="#bcc3c7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="560" fill="#FCFCFB"/>
+
+  <!-- centerline -->
+  <line x1="150" y1="300" x2="1050" y2="300" stroke="#E7E4E0" stroke-width="1" stroke-dasharray="6 6"/>
+
+  <!-- ===== VEHICLE (side profile), nose left / thruster right ===== -->
+  <!-- main hull -->
+  <rect x="320" y="255" width="520" height="90" rx="10" fill="url(#hull)" stroke="#aab1b6" stroke-width="1.5"/>
+  <!-- section seams -->
+  <line x1="470" y1="257" x2="470" y2="343" stroke="#aab1b6" stroke-width="1"/>
+  <line x1="690" y1="257" x2="690" y2="343" stroke="#aab1b6" stroke-width="1"/>
+
+  <!-- nose dome (front) -->
+  <path d="M320 255 q-70 0 -70 45 q0 45 70 45 Z" fill="url(#cap)" stroke="#aab1b6" stroke-width="1.5"/>
+  <!-- camera lens -->
+  <circle cx="262" cy="300" r="12" fill="#2b3236" stroke="#14171A" stroke-width="2"/>
+  <circle cx="258" cy="296" r="3.5" fill="#6E7680"/>
+
+  <!-- rear end + thruster duct -->
+  <path d="M840 255 q34 0 34 45 q0 45 -34 45 Z" fill="url(#cap)" stroke="#aab1b6" stroke-width="1.5"/>
+  <ellipse cx="892" cy="300" rx="16" ry="46" fill="none" stroke="#8a9297" stroke-width="6"/>
+  <ellipse cx="892" cy="300" rx="16" ry="30" fill="#eef1f2" stroke="#aab1b6" stroke-width="1.5"/>
+  <circle cx="892" cy="300" r="9" fill="#B5664B"/>
+
+  <!-- top control fin (rear) -->
+  <path d="M735 255 L800 255 L785 214 L755 214 Z" fill="#cdd3d7" stroke="#aab1b6" stroke-width="1.5"/>
+  <!-- bottom control fin (rear) -->
+  <path d="M735 345 L800 345 L785 386 L755 386 Z" fill="#cdd3d7" stroke="#aab1b6" stroke-width="1.5"/>
+
+  <!-- pivoting front thruster (belly) -->
+  <rect x="352" y="345" width="46" height="20" rx="4" fill="#c2c9cd" stroke="#aab1b6" stroke-width="1.5"/>
+  <ellipse cx="375" cy="372" rx="20" ry="9" fill="none" stroke="#8a9297" stroke-width="4"/>
+  <circle cx="375" cy="372" r="4" fill="#B5664B"/>
+
+  <!-- hydrophone array (4 on top) -->
+  <g fill="#14171A">
+    <circle cx="500" cy="253" r="5"/><circle cx="560" cy="253" r="5"/>
+    <circle cx="620" cy="253" r="5"/><circle cx="680" cy="253" r="5"/>
+  </g>
+
+  <!-- ballast section (internal) -->
+  <rect x="474" y="272" width="212" height="56" rx="4" fill="none" stroke="#B5664B" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <line x1="486" y1="300" x2="674" y2="300" stroke="#8a9297" stroke-width="3"/>
+  <g stroke="#8a9297" stroke-width="2">
+    <line x1="492" y1="294" x2="492" y2="306"/><line x1="506" y1="294" x2="506" y2="306"/>
+    <line x1="520" y1="294" x2="520" y2="306"/><line x1="534" y1="294" x2="534" y2="306"/>
+  </g>
+
+  <!-- compute block -->
+  <rect x="700" y="278" width="34" height="44" rx="3" fill="#2b3236" stroke="#14171A" stroke-width="1.5"/>
+  <rect x="706" y="284" width="22" height="14" rx="2" fill="#4a545a"/>
+
+  <!-- ===== CALLOUTS ===== -->
+  <g stroke="#B5664B" stroke-width="1.2" fill="none">
+    <path d="M262 288 L262 150 L150 150"/>
+    <path d="M590 253 L590 120 L720 120"/>
+    <path d="M580 300 L580 300"/>
+    <path d="M375 381 L375 470 L150 470"/>
+    <path d="M770 214 L770 165 L900 165"/>
+    <path d="M892 254 L892 130 L1050 130"/>
+    <path d="M717 278 L717 205 L1050 205"/>
+    <path d="M580 328 L580 445 L720 445"/>
+  </g>
+  <g fill="#B5664B"><circle cx="150" cy="150" r="3"/><circle cx="720" cy="120" r="3"/><circle cx="150" cy="470" r="3"/><circle cx="900" cy="165" r="3"/><circle cx="1050" cy="130" r="3"/><circle cx="1050" cy="205" r="3"/><circle cx="720" cy="445" r="3"/></g>
+
+  <!-- label text -->
+  <g fill="#14171A" font-size="15" font-weight="600">
+    <text x="150" y="145">Front camera</text>
+    <text x="724" y="115">4&#215; hydrophone array</text>
+    <text x="150" y="465">Pivoting front thruster</text>
+    <text x="904" y="160">Servo-actuated fins</text>
+    <text x="1050" y="125" text-anchor="end">T200 main thruster</text>
+    <text x="1050" y="200" text-anchor="end">Onboard compute (Jetson)</text>
+    <text x="724" y="440">Ballast tank</text>
+  </g>
+  <g fill="#6E7680" font-size="12">
+    <text x="150" y="163">OpenCV vision tracking</text>
+    <text x="724" y="133">TDOA bearing &amp; range</text>
+    <text x="150" y="483">vectored low-speed control</text>
+    <text x="904" y="178">horizontal-plane steering</text>
+    <text x="1050" y="218" text-anchor="end">onboard classification &amp; control</text>
+    <text x="724" y="458">threaded-rod depth control</text>
+  </g>
+
+  <!-- footer scale note -->
+  <text x="150" y="530" fill="#6E7680" font-size="12">4&#8243; PVC hull &#183; 3D-printed endcaps &#183; near-neutral static trim</text>
+</svg>
