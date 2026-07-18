@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Autonomous Underwater Vehicle | Joshua Dalal</title>
-<meta name="description" content="A working autonomous underwater vehicle built in a weekend at the Albacore defense-tech hackathon, plus the systems concept for coordinating them as a low-cost swarm.">
+<meta name="description" content="An autonomous underwater vehicle built in a weekend at the Albacore defense-tech hackathon, plus the systems concept for coordinating them as a low-cost swarm.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -26,16 +26,16 @@
     <a class="crumb" href="../index.html#propulsion">&larr; All work</a>
     <p class="mono eyebrow" style="margin-top:22px">Autonomous Systems / Hackathon, 2026</p>
     <h1 class="display">Autonomous Underwater Vehicle</h1>
-    <p class="lede">A working autonomous underwater vehicle built over a weekend at the Albacore defense-tech hackathon, and the systems concept for fielding them as an affordable, coordinated swarm. Our team built a single untethered unit that detects an underwater target, classifies it, and navigates toward it on its own.</p>
+    <p class="lede">An autonomous underwater vehicle built over a weekend at the Albacore defense-tech hackathon, and the systems concept for fielding them as an affordable, coordinated swarm. Our team built a single untethered unit designed to detect an underwater target, classify it, and navigate toward it on its own.</p>
     <div class="plate"><div><b>Class</b><span>Autonomous UUV</span></div><div><b>Hull</b><span>4&quot; PVC</span></div><div><b>Compute</b><span>Jetson Orin Nano + Teensy</span></div><div><b>Nav</b><span>GPS / IMU / vision</span></div><div><b>Event</b><span>Albacore Hackathon</span></div></div>
   </header>
   <figure class="proj-hero"><img src="../assets/uuv-vehicle.svg" alt="Side-profile diagram of the autonomous underwater vehicle showing hull, thrusters, control fins, ballast, hydrophone array, camera, and onboard compute"><figcaption>Vehicle architecture: propulsion, ballast depth control, and the acoustic and vision sensor suite</figcaption></figure>
   <article class="prose">
 <h2>Overview</h2>
-<p>The brief was maritime defense: a low-cost, autonomous underwater vehicle that can persist in an area, sense what moves through it, and act without a human in the loop. The long-term vision is a distributed swarm; the weekend deliverable was one working unit that demonstrates the core autonomy pipeline end to end. Beyond strike, the same platform is aimed at the roles that dominate real naval operations: distributed acoustic surveillance and mine countermeasures. A recurring theme in the design was the mission-kill idea explored in naval strategy circles: disabling a vessel's propulsion rather than sinking it, which is less escalatory and preserves options.</p>
+<p>The brief was maritime defense: a low-cost, autonomous underwater vehicle that can persist in an area, sense what moves through it, and act without a human in the loop. The long-term vision is a distributed swarm; the weekend deliverable was a single unit built around that core autonomy pipeline. Beyond strike, the same platform is aimed at the roles that dominate real naval operations: distributed acoustic surveillance and mine countermeasures. A recurring theme in the design was the mission-kill idea explored in naval strategy circles: disabling a vessel's propulsion rather than sinking it, which is less escalatory and preserves options.</p>
 
 <h2>Vehicle &amp; propulsion</h2>
-<p>The vehicle is a 4-inch PVC pressure hull with 3D-printed endcaps, cable glands for every external sensor, and an internal rail that slides the electronics out for bench work. Propulsion combines a BlueRobotics T200 main thruster, a pivoting front thruster for low-speed vectoring, and four servo-actuated fins. Depth is set by a ballast tank driven by a small motor turning a threaded rod, closed against a pressure sensor. The whole vehicle is trimmed near neutral buoyancy so a small ballast motor can control depth, and it fails safe by blowing ballast to surface on any fault.</p>
+<p>The vehicle is a 4-inch PVC pressure hull with 3D-printed endcaps, cable glands for every external sensor, and an internal rail that slides the electronics out for bench work. Propulsion combines a BlueRobotics T200 main thruster, a pivoting front thruster for low-speed vectoring, and four servo-actuated fins. Depth is set by a ballast tank driven by a small motor turning a threaded rod, closed against a pressure sensor. The whole vehicle is trimmed near neutral buoyancy so a small ballast motor can control depth, and it is designed to fail safe by blowing ballast to the surface on a fault.</p>
 
 <h2>Controls architecture</h2>
 <p>To make the controls tractable in a weekend, we decoupled them: the horizontal plane (main thrust plus fin steering) and the vertical plane (ballast) are treated as independent problems, and the vehicle is held parallel to the surface rather than pitching. That simplification turned a coupled 6-DOF control problem into two manageable loops without giving up the maneuvers the mission actually needs.</p>
@@ -48,7 +48,7 @@
 <p>The swarm layer is what makes the platform interesting at scale, and most of it is a systems and software story. An operator draws an area of interest and the available units distribute themselves across it. Short-range acoustic modems let units relay contacts to a surface relay, since radio does not travel underwater. And because each unit is built entirely from off-the-shelf and 3D-printed parts, the economics invert the usual cost of undersea presence. We prototyped the swarm-management and return-to-base logic in software, where a unit nearing end-of-charge hands off to a fresh one for continuous coverage.</p>
 
 <h2>My role</h2>
-<p>I focused on the vehicle itself: propulsion layout, the ballast and buoyancy-trim mechanism, and the decoupled controls architecture that let the sub actually hold depth and track a target in the water. Building a sealed, near-neutrally-buoyant autonomous vehicle that survives contact with water and does something useful, in a weekend, is mostly a systems-integration problem, and that is the part I like.</p>
+<p>I focused on the ballast system and the vehicle's mechanical integration. That meant designing the depth-control mechanism and the buoyancy trim, selecting mechanical components that would fit and survive in a sealed hull, and packaging the propulsion, sensing, and compute so they physically worked together in one PVC tube. On a weekend build with a mixed team, that integration work, the sealing, packaging, trim, and part selection that gets everything into one vehicle, is the part I owned.</p>
 </article>
   <nav class="pn">
     <a href="turbojet.html">&larr; Previous<b>Axial Turbojet</b></a>
