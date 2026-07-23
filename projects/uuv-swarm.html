@@ -39,7 +39,6 @@
 
 <h2>Controls architecture</h2>
 <p>To make the controls tractable in a weekend, we decoupled them: the horizontal plane (main thrust plus fin steering) and the vertical plane (ballast) are treated as independent problems, and the vehicle is held parallel to the surface rather than pitching. That simplification turned a coupled 6-DOF control problem into two manageable loops without giving up the maneuvers the mission actually needs.</p>
-<figure class="fig wide" style="margin:8px 0 24px"><img src="../assets/uuv-pipeline.svg" alt="Autonomy pipeline: detect, classify, localize, navigate, engage" loading="lazy"><figcaption>The onboard autonomy pipeline, from passive detection to guided approach</figcaption></figure>
 
 <h2>Sensing &amp; autonomy</h2>
 <p>Sensing is deliberately cheap and hybrid rather than dependent on any one channel. A four-element hydrophone array uses time-delay-of-arrival between elements to estimate the bearing and range of a sound source, and a classification stage matches propeller acoustics to identify what it is hearing. A forward camera runs OpenCV object detection for tracking, and four ultrasonic sensors handle close-range obstacle avoidance. Navigation layers GPS fixes at the surface, IMU dead-reckoning while submerged, and vision-based tracking on the target. A Jetson Orin Nano runs the inference; a Teensy 4.1 handles real-time actuation.</p>
