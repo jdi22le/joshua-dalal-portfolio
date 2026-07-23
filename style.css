@@ -130,22 +130,29 @@ nav{position:sticky;top:0;z-index:50;background:rgba(252,252,251,.92);
 .skill-block b{font-size:13px;color:var(--copper);font-weight:600;display:block;
   border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px}
 .skill-block p{font-size:15px;color:#2c3338}
-.resume-card{display:flex;align-items:center;justify-content:space-between;gap:20px;
+/* about: résumé download bar */
+.resume-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;
   border:1px solid var(--line);border-top:2px solid var(--copper);background:#fff;
-  padding:20px 22px;transition:border-color .15s;margin-bottom:38px}
-.resume-card:hover{border-color:var(--copper)}
-.resume-meta{display:flex;flex-direction:column;gap:3px}
-.resume-meta b{font-family:'Archivo',sans-serif;font-size:17px;letter-spacing:-.01em;font-weight:700}
-.resume-meta .muted{font-size:13.5px}
-.resume-arrow{font-size:20px;color:var(--copper);border:1px solid var(--line);
-  width:46px;height:46px;display:flex;align-items:center;justify-content:center;
+  padding:18px 20px;margin-bottom:40px;transition:border-color .15s}
+.resume-bar:hover{border-color:var(--copper)}
+.rb-text{display:flex;flex-direction:column;gap:4px}
+.rb-text .mono{color:var(--steel);font-weight:500}
+.rb-text b{font-family:'Archivo',sans-serif;font-size:16px;letter-spacing:-.01em;font-weight:700}
+.rb-arrow{font-size:18px;color:var(--copper);border:1px solid var(--line);
+  width:42px;height:42px;display:flex;align-items:center;justify-content:center;
   flex-shrink:0;transition:background .15s,color .15s,border-color .15s}
-.resume-card:hover .resume-arrow{background:var(--copper);border-color:var(--copper);color:#fff}
-.course-label{color:var(--steel);font-weight:600;margin-bottom:14px}
-.course-tags{list-style:none;display:flex;flex-wrap:wrap;gap:9px}
-.course-tags li{font-size:13.5px;color:#2c3338;border:1px solid var(--line);
-  padding:6px 12px;background:#fff;transition:border-color .15s,color .15s}
-.course-tags li:hover{border-color:var(--copper);color:var(--copper)}
+.resume-bar:hover .rb-arrow{background:var(--copper);border-color:var(--copper);color:#fff}
+
+/* about: grouped coursework */
+.course-groups{display:flex;flex-direction:column;gap:24px}
+.course-group > .mono{color:var(--copper);font-weight:600;display:block;
+  border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:12px}
+.course-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.course-list li{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:baseline}
+.course-list .code{font-size:12.5px;font-weight:600;color:var(--steel);
+  letter-spacing:.01em;white-space:nowrap}
+.course-list .title{font-size:14.5px;color:#2c3338}
+.course-list li.ip .title{color:var(--steel)}
 
 /* footer */
 footer{background:var(--panel);color:var(--panel-ink);margin-top:70px}
@@ -170,6 +177,7 @@ footer a:hover{border-color:var(--copper)}
 @media (max-width:560px){
   .grid{grid-template-columns:1fr}
   body{font-size:16px}
+  .course-list li{grid-template-columns:80px 1fr;gap:10px}
 }
 
 /* additional projects */
