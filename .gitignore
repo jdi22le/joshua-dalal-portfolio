@@ -1,1 +1,20 @@
+# Everything in this repo is published on the live site.
+# List anything here that should stay on this computer only.
+
+# Private working files: transcript, resume source code, backups, certificates
+Resume/
+
+# Outdated files kept for reference
+old/
+
+# Claude-generated working files
 Claude outputs/
+.claude/
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+~$*
+.vscode/

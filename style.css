@@ -152,6 +152,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(252,252,251,.92);
 .resume-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;
   border:1px solid var(--line);border-top:2px solid var(--copper);background:#fff;
   padding:18px 20px;margin-bottom:40px;transition:border-color .15s}
+.resume-bar:has(+ .resume-bar){margin-bottom:12px}
 .resume-bar:hover{border-color:var(--copper)}
 .rb-text{display:flex;flex-direction:column;gap:4px}
 .rb-text .mono{color:var(--steel);font-weight:500}
